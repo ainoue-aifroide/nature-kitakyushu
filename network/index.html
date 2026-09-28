@@ -395,16 +395,23 @@
     <!-- ヘッダー -->
     <header class="header">
       <div class="header__inner">
-        <a href="../" class="header__logo">
-          <img
-            src="../images/2026/02/logo.png"
-            alt="アーバンネイチャー北九州"
-            width="160"
-            height="40"
-          /><span class="header__logo-sub" aria-hidden="true"
-            >北九州市生物多様性戦略 2025–2030</span
+        <div class="header__logo">
+          <a href="../" class="header__logo-link"
+            ><img
+              src="../images/2026/02/logo.png"
+              alt="アーバンネイチャー北九州"
+              width="160"
+              height="40" /></a
+          ><a
+            class="header__logo-sub"
+            href="https://www.city.kitakyushu.lg.jp/contents/924_02006.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            >北九州市生物多様性戦略 2025–2030<span class="sr-only"
+              >（北九州市公式サイト・新しいタブで開きます）</span
+            ></a
           >
-        </a>
+        </div>
         <nav class="header__nav" aria-label="メインナビゲーション">
           <a href="../news/">お知らせ</a>
           <div class="nav-item">
@@ -412,18 +419,19 @@
             <ul class="dropdown">
               <li><a href="../about/">全体像</a></li>
               <li><a href="../about/biodiversity.html">生物多様性とは？</a></li>
-              <li><a href="../about/strategy.html">北九州市の取り組み</a></li>
+              <li><a href="../about/strategy.html">北九州市の取組</a></li>
               <li><a href="../center/">活動拠点</a></li>
               <li><a href="../about/spots.html">北九州市の自然スポット</a></li>
             </ul>
           </div>
           <div class="nav-item">
-            <a href="../network/" class="active">地域との繋がり</a>
+            <a href="../network/" class="active">ネットワーク</a>
             <ul class="dropdown">
               <li>
                 <a href="../network/">北九州ネイチャーポジティブネットワーク</a>
               </li>
-              <li><a href="../join/">会員募集</a></li>
+              <li><a href="../network/projects/">企業参加型プロジェクト</a></li>
+              
             </ul>
           </div>
           <div class="nav-item">
@@ -431,7 +439,7 @@
             <ul class="dropdown">
               <li><a href="../network/cases/">ネイチャーポジティブ実践事例</a></li>
               <li><a href="../blog/">企業の活動ブログ</a></li>
-              <li><a href="../blog/">団体等の活動ブログ</a></li>
+              <li><a href="../blog/organization.html">団体等の活動ブログ</a></li>
             </ul>
           </div>
           <a href="../events/">イベントを探す</a>
@@ -466,14 +474,14 @@
         <div class="mobile-nav__children">
           <a href="../about/">全体像</a>
           <a href="../about/biodiversity.html">生物多様性とは？</a>
-          <a href="../about/strategy.html">北九州市の取り組み</a>
-          <a href="../about/spots.html">北九州市の自然スポット</a>
+          <a href="../about/strategy.html">北九州市の取組</a>
           <a href="../center/">活動拠点</a>
+          <a href="../about/spots.html">北九州市の自然スポット</a>
         </div>
       </div>
       <div class="mobile-nav__group">
         <div class="mobile-nav__parent">
-          <a href="../network/">地域との繋がり</a>
+          <a href="../network/">ネットワーク</a>
           <button
             class="mobile-nav__toggle"
             aria-expanded="false"
@@ -484,7 +492,8 @@
         </div>
         <div class="mobile-nav__children">
           <a href="../network/">北九州ネイチャーポジティブネットワーク</a>
-          <a href="../join/">会員募集</a>
+          <a href="../network/projects/">企業参加型プロジェクト</a>
+          
         </div>
       </div>
       <div class="mobile-nav__group">
@@ -497,13 +506,14 @@
         <div class="mobile-nav__children">
           <a href="../network/cases/">ネイチャーポジティブ実践事例</a>
           <a href="../blog/">企業の活動ブログ</a>
-          <a href="../blog/">団体等の活動ブログ</a>
+          <a href="../blog/organization.html">団体等の活動ブログ</a>
         </div>
       </div>
       <a href="../events/">イベントを探す</a>
       <a href="../photos/">みんなの写真展</a>
+      <a href="../contact/">お問合せ</a>
       <div class="mobile-nav__cta">
-        <a href="#join" class="btn btn--primary btn--block">参加する</a>
+        <a href="../join/" class="btn btn--primary btn--block">参加する</a>
       </div>
     </nav>
     <!-- パンくずリスト -->
@@ -511,7 +521,7 @@
       <div class="container">
         <ol class="breadcrumb__list">
           <li><a href="../">トップ</a></li>
-          <li>地域との繋がり</li>
+          <li>ネットワーク</li>
         </ol>
       </div>
     </nav>
@@ -554,7 +564,7 @@
               >あなたが今すでにやっていることが、つながりになります。</strong
             >
           </p>
-          <p style="margin-top: 16px">
+          <p style="margin-top: 16px; font-weight: bold">
             北九州ネイチャーポジティブネットワークは、そんな取組を持ち寄り、<br />
             互いに刺激しながら広げていくためのコミュニティです。<br />
             参加費は無料で負担や義務はありません。登録は数分。退会も自由です。
@@ -777,18 +787,6 @@
             </div>
           </div>
         </div>
-        <div style="text-align: center; margin-top: 40px">
-          <a
-            href="https://ttzk.graffer.jp/city-kitakyushu/smart-apply/apply-procedure-alias/npnw/door"
-            class="btn btn--primary btn--lg"
-            target="_blank"
-            rel="noopener noreferrer"
-            >無料でエントリーする</a
-          >
-          <p style="margin-top: 12px; font-size: 0.82rem; color: #888">
-            登録後も、いつでも退会できます
-          </p>
-        </div>
       </div>
     </section>
     <!-- メリット -->
@@ -883,7 +881,7 @@
         </div>
         <!-- 中間CTA -->
         <div class="mid-cta">
-          <div class="mid-cta__title">会員募集</div>
+          <div class="mid-cta__title">会員申込</div>
           <div class="mid-cta__sub">
             企業・団体・個人を問わず、どなたでもご参加いただけます
           </div>
@@ -900,33 +898,45 @@
         </div>
       </div>
     </section>
+    <!-- 活動紹介リンク -->
+    <section class="section section--white" id="members">
+      <div class="container" style="text-align: center">
+        <h2 class="section__title">会員たちの活動紹介</h2>
+        <p class="section__subtitle">
+          「うちにも同じような取組がある」と気づくはずです
+        </p>
+        <div style="margin-top: 32px">
+          <a href="cases/" class="btn btn--primary btn--lg">活動実績を見る</a>
+        </div>
+      </div>
+    </section>
     <!-- 実績数字 -->
-    <section class="section section--white">
+    <section class="section section--gray">
       <div class="container">
         <h2 class="section__title">すでに多くの仲間が動いています</h2>
-        <p class="section__subtitle">2024年時点の参加状況</p>
+        <p class="section__subtitle">2026年9月7日時点の参加状況</p>
         <div class="stats-highlight">
           <div class="stats-highlight__item">
             <div class="stats-highlight__num">
-              35<span class="stats-highlight__unit">社</span>
+              41<span class="stats-highlight__unit">社</span>
             </div>
             <div class="stats-highlight__label">企業会員</div>
           </div>
           <div class="stats-highlight__item">
             <div class="stats-highlight__num">
-              17<span class="stats-highlight__unit">団体</span>
+              20<span class="stats-highlight__unit">団体</span>
             </div>
             <div class="stats-highlight__label">NPO・大学・市民団体</div>
           </div>
           <div class="stats-highlight__item">
             <div class="stats-highlight__num">
-              9<span class="stats-highlight__unit">名</span>
+              10<span class="stats-highlight__unit">名</span>
             </div>
             <div class="stats-highlight__label">賛助会員（個人）</div>
           </div>
           <div class="stats-highlight__item">
             <div class="stats-highlight__num">
-              56+<span
+              71+<span
                 class="stats-highlight__unit"
                 style="font-size: 0.8rem"
               ></span>
@@ -937,22 +947,19 @@
       </div>
     </section>
     <!-- 会員一覧 -->
-    <section class="section section--gray">
+    <section class="section section--white">
       <div class="container">
         <h2 class="section__title">会員一覧</h2>
-        <p class="section__subtitle">
-          この中に、あなたの知っている名前はありますか？
-        </p>
         <!-- タブ -->
         <div class="tabs" id="member-tabs" style="margin-top: 32px">
-          <button class="tab active" data-category="corporate">
-            企業会員（35社）
+          <button class="tab" data-category="corporate">
+            企業会員（41社）
           </button>
           <button class="tab" data-category="organization">
-            団体・教育関連等会員（17団体）
+            団体・教育関連等会員（20団体）
           </button>
           <button class="tab" data-category="supporting">
-            賛助会員（9名）
+            賛助会員（10名）
           </button>
         </div>
         <div id="member-list">
@@ -962,7 +969,7 @@
                 href="https://www.ecoplan.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >エコプラン研究所</a
+                >株式会社 エコプラン研究所</a
               >
             </div>
             <div class="member-item">
@@ -970,7 +977,7 @@
                 href="https://www.imanaga-r.co.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >イマナガ</a
+                >株式会社 イマナガ</a
               >
             </div>
             <div class="member-item">
@@ -978,7 +985,7 @@
                 href="https://www.tomushi.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >TOMUSHI</a
+                >株式会社 TOMUSHI</a
               >
             </div>
             <div class="member-item">
@@ -986,15 +993,15 @@
                 href="https://www.nishihara-corp.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >西原商事</a
+                >株式会社 西原商事</a
               >
             </div>
             <div class="member-item">
               <a
-                href="https://www.beetleengineering.jp/"
+                href="https://beetleengineering.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >ビートルエンジニアリング</a
+                >株式会社 ビートルエンジニアリング</a
               >
             </div>
             <div class="member-item">
@@ -1010,7 +1017,7 @@
                 href="https://www.bridgestone.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >ブリヂストン</a
+                >株式会社 ブリヂストン</a
               >
             </div>
             <div class="member-item">
@@ -1018,7 +1025,7 @@
                 href="https://www.izutsuya.co.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >井筒屋</a
+                >株式会社 井筒屋</a
               >
             </div>
             <div class="member-item">
@@ -1026,7 +1033,7 @@
                 href="https://www.hokuzaiunyu.co.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >ホクザイ運輸</a
+                >ホクザイ運輸 株式会社</a
               >
             </div>
             <div class="member-item">
@@ -1034,7 +1041,7 @@
                 href="https://j-marusei.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >丸清</a
+                >株式会社 丸清</a
               >
             </div>
             <div class="member-item">
@@ -1042,7 +1049,7 @@
                 href="https://www.mine-jp.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >マイン</a
+                >株式会社 マイン</a
               >
             </div>
             <div class="member-item">
@@ -1050,7 +1057,7 @@
                 href="https://www.tokiomarine-nichido.co.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >東京海上日動火災保険</a
+                >東京海上日動火災保険 株式会社</a
               >
             </div>
             <div class="member-item">
@@ -1058,7 +1065,7 @@
                 href="https://www.jgccc.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >日揮触媒化成</a
+                >日揮触媒化成 株式会社</a
               >
             </div>
             <div class="member-item">
@@ -1066,7 +1073,7 @@
                 href="https://www.giravanz.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >ギラヴァンツ北九州</a
+                >株式会社 ギラヴァンツ北九州</a
               >
             </div>
             <div class="member-item">
@@ -1074,7 +1081,7 @@
                 href="https://www.nissankyushu.co.jp/index.html"
                 target="_blank"
                 rel="noopener noreferrer"
-                >日産自動車九州</a
+                >日産自動車九州 株式会社</a
               >
             </div>
             <div class="member-item">
@@ -1082,7 +1089,7 @@
                 href="https://www.kyuden.co.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >九州電力</a
+                >九州電力 株式会社</a
               >
             </div>
             <div class="member-item">
@@ -1090,7 +1097,7 @@
                 href="https://tat.jp.toto.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >TOTOアクアテクノ</a
+                >TOTOアクアテクノ 株式会社</a
               >
             </div>
             <div class="member-item">
@@ -1098,7 +1105,7 @@
                 href="https://www.nrs-inc.co.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >NRS</a
+                >株式会社 NRS</a
               >
             </div>
             <div class="member-item">
@@ -1106,7 +1113,7 @@
                 href="https://nature-sizenkai.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >Nature</a
+                >株式会社 Nature</a
               >
             </div>
             <div class="member-item">
@@ -1114,7 +1121,7 @@
                 href="https://www.kourocement.co.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >日鉄高炉セメント</a
+                >日鉄高炉セメント 株式会社</a
               >
             </div>
             <div class="member-item">
@@ -1122,7 +1129,7 @@
                 href="https://sytem.sakuraweb.com/home"
                 target="_blank"
                 rel="noopener noreferrer"
-                >エコボスコ</a
+                >エコボスコ合同会社</a
               >
             </div>
             <div class="member-item">
@@ -1130,7 +1137,7 @@
                 href="https://k-tsunemi.co.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >ツネミ</a
+                >株式会社ツネミ</a
               >
             </div>
             <div class="member-item">
@@ -1138,7 +1145,7 @@
                 href="https://clean-center.co.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >クリーンセンター</a
+                >株式会社クリーンセンター</a
               >
             </div>
             <div class="member-item">
@@ -1154,7 +1161,7 @@
                 href="https://joycle.net/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >JOYCLE</a
+                >株式会社JOYCLE</a
               >
             </div>
             <div class="member-item">
@@ -1162,7 +1169,7 @@
                 href="https://www.wjgrc.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >西日本ガラスリサイクルセンター</a
+                >株式会社 西日本ガラスリサイクルセンター</a
               >
             </div>
             <div class="member-item">
@@ -1170,7 +1177,7 @@
                 href="https://www.eng.nipponsteel.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >日鉄エンジニアリング</a
+                >日鉄エンジニアリング株式会社</a
               >
             </div>
             <div class="member-item">
@@ -1178,7 +1185,7 @@
                 href="https://www.well-c.co.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >ウエルクリエイト</a
+                >株式会社ウエルクリエイト</a
               >
             </div>
             <div class="member-item">
@@ -1186,7 +1193,7 @@
                 href="https://www.smtb.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >三井住友信託銀行</a
+                >三井住友信託銀行株式会社</a
               >
             </div>
             <div class="member-item">
@@ -1194,7 +1201,7 @@
                 href="https://taikou.co.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >大幸組</a
+                >株式会社大幸組</a
               >
             </div>
             <div class="member-item">
@@ -1202,7 +1209,7 @@
                 href="https://www.takagi.co.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >タカギ</a
+                >株式会社タカギ</a
               >
             </div>
             <div class="member-item">
@@ -1210,15 +1217,15 @@
                 href="https://www.toyota-kyushu.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >トヨタ自動車九州</a
+                >トヨタ自動車九州株式会社</a
               >
             </div>
             <div class="member-item">
               <a
-                href="https://praise-arc.com"
+                href="https://www.jcarb.com/Portfolio00003800.html"
                 target="_blank"
                 rel="noopener noreferrer"
-                >ＰＲＡＩＳＥ一級建築士事務所</a
+                >ＰＲＡＩＳＥ一級建築士事務所株式会社</a
               >
             </div>
             <div class="member-item">
@@ -1226,7 +1233,7 @@
                 href="https://and.kagome.co.jp/article/blog/action/112208/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >響灘菜園</a
+                >響灘菜園株式会社</a
               >
             </div>
             <div class="member-item">
@@ -1234,11 +1241,53 @@
                 href="https://koishi.co.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >コイシ</a
+                >株式会社コイシ</a
+              >
+            </div>
+            <div class="member-item">ヤマト運輸株式会社</div>
+            <div class="member-item">教育出版株式会社</div>
+            <div class="member-item">
+              <a
+                href="https://www.denso-kyushu.co.jp/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >株式会社デンソー九州</a
+              >
+            </div>
+            <div class="member-item">
+              <a
+                href="https://jp.toto.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >TOTO株式会社</a
+              >
+            </div>
+            <div class="member-item">
+              <a
+                href="https://www.sonylife.co.jp/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >ソニー生命保険株式会社 北九州支店</a
+              >
+            </div>
+            <div class="member-item">
+              <a
+                href="https://sites.google.com/view/heartland1996/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >ハートランド平尾台株式会社</a
               >
             </div>
           </div>
           <div class="member-grid"data-category="organization">
+            <div class="member-item">
+              <a
+                href="https://meijigakuen.ed.jp/jsh/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >明治学園中学高等学校</a
+              >
+            </div>
             <div class="member-item">
               <a
                 href="https://www.hibikinadabiotope.com/"
@@ -1260,7 +1309,7 @@
                 href="https://umi-tsunagi.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >うみつなぎ</a
+                >一般社団法人うみつなぎ</a
               >
             </div>
             <div class="member-item">
@@ -1284,7 +1333,7 @@
                 href="https://www.facebook.com/kitakyu.biolab/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >北九州ビオトープ・ネットワーク研究会</a
+                >特定非営利活動法人 北九州ビオトープ・ネットワーク研究会</a
               >
             </div>
             <div class="member-item">
@@ -1292,7 +1341,7 @@
                 href="https://www.iges.or.jp/jp/about/research-units/kitakyushu-urban-centre"
                 target="_blank"
                 rel="noopener noreferrer"
-                >IGES</a
+                >公益財団法人 地球環境戦略研究機関</a
               >
             </div>
             <div class="member-item">ジオ&amp;バイオ研究会</div>
@@ -1301,15 +1350,15 @@
                 href="https://gyobu.or.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >北九州高等学校魚部</a
+                >福岡県立北九州高等学校魚部</a
               >
             </div>
             <div class="member-item">
               <a
-                href="https://myearthgame.jp/"
+                href="https://www.soela.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >SoELa</a
+                >NPO法人 SoELa</a
               >
             </div>
             <div class="member-item">
@@ -1333,16 +1382,16 @@
                 href="http://omoyai.co.jp/farm/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >おもやいファーム</a
+                >一般社団法人おもやいファーム</a
               >
             </div>
-            <div class="member-item">環境ネットワーク</div>
+            <div class="member-item">NPO法人環境ネットワーク</div>
             <div class="member-item">
               <a
                 href="https://www.tobata.kyutech.ac.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >九州工業大学環境デザイン研究室</a
+                >九州工業大学大学院工学府建設社会工学系環境デザイン研究室</a
               >
             </div>
             <div class="member-item">
@@ -1350,7 +1399,7 @@
                 href="https://yahata-higashida.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >八幡東田まちづくり推進協議会</a
+                >八幡東田まちづくり連絡協議会</a
               >
             </div>
             <div class="member-item">
@@ -1358,8 +1407,14 @@
                 href="https://www.kanmon-dmo.org/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >海峡都市関門DMO</a
+                >一般社団法人 海峡都市関門DMO</a
               >
+            </div>
+            <div class="member-item">
+              <span>NPO法人まちのカルシウム工房</span>
+            </div>
+            <div class="member-item">
+              <span>河内さくら公園愛護会</span>
             </div>
           </div>
           <div
@@ -1371,21 +1426,9 @@
               class="member-item"
               style="grid-column: 1 / -1; text-align: center; padding: 24px"
             >
-              賛助会員：9名が参加しています
+              賛助会員：10名が参加しています
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-    <!-- 活動紹介リンク -->
-    <section class="section section--white" id="members">
-      <div class="container" style="text-align: center">
-        <h2 class="section__title">会員たちの活動紹介</h2>
-        <p class="section__subtitle">
-          「うちにも同じような取組がある」と気づくはずです
-        </p>
-        <div style="margin-top: 32px">
-          <a href="cases/" class="btn btn--primary btn--lg">活動実績を見る</a>
         </div>
       </div>
     </section>
@@ -1424,24 +1467,24 @@
             <div class="footer__links">
               <a href="../about/">全体像</a>
               <a href="../about/biodiversity.html">生物多様性とは？</a>
-              <a href="../about/strategy.html">北九州市の取り組み</a>
+              <a href="../about/strategy.html">北九州市の取組</a>
               <a href="../center/">活動拠点</a>
               <a href="../about/spots.html">北九州市の自然スポット</a>
             </div>
             <h3 class="footer__heading" style="margin-top: 24px">
-              地域との繋がり
+              ネットワーク
             </h3>
             <div class="footer__links">
               <a href="../network/">北九州ネイチャーポジティブ<br class="footer__br">ネットワーク</a>
-              <a href="../join/">会員募集</a>
+              <a href="../network/projects/">企業参加型プロジェクト</a>
             </div>
           </div>
           <div>
-            <h3 class="footer__heading" style="margin-top:24px">活動紹介</h3>
+            <h3 class="footer__heading">活動紹介</h3>
             <div class="footer__links">
               <a href="../network/cases/">ネイチャーポジティブ実践事例</a>
               <a href="../blog/">企業の活動ブログ</a>
-              <a href="../blog/">団体等の活動ブログ</a>
+              <a href="../blog/organization.html">団体等の活動ブログ</a>
             </div>
           </div>
           <div>
@@ -1457,7 +1500,6 @@
         </div>
         <div class="footer__bottom">
           <span>Copyright (C) 2026 CITY OF KITAKYUSHU All Rights Reserved.</span>
-          <a href="../privacy/">プライバシーポリシー</a>
         </div>
       </div>
     </footer>

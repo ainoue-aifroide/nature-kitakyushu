@@ -12,6 +12,7 @@
   --accent-light: #027a89;
   --bg: #f5f5f5;
   --bg-white: #ffffff;
+  --bg-gray: #F8FAF8;
   --text: #333333;
   --text-light: #666666;
   --text-muted: #767676;
@@ -74,7 +75,11 @@
 }
 /* --- インタラクティブカード（hover lift）--- */
 .spot-card-link {
-  display: block;
+  /* グリッド行の高さに合わせて伸びた分をテキスト面で埋め、
+     カード下部にセクション背景が覗くのを防ぐ */
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-white);
   text-decoration: none;
   color: inherit;
   border-radius: 12px;
@@ -83,6 +88,9 @@
   transition:
     transform 0.3s,
     box-shadow 0.3s;
+}
+.spot-card-link > *:last-child {
+  flex: 1;
 }
 .spot-card-link:hover,
 .spot-card-link:focus-visible {
@@ -316,6 +324,9 @@ h6 {
   height: 40px;
   width: auto;
 }
+.header__logo-link {
+  display: block;
+}
 .header__logo-sub {
   font-size: 0.62rem;
   font-weight: 500;
@@ -323,6 +334,15 @@ h6 {
   letter-spacing: 0.02em;
   line-height: 1;
   padding-left: 66px;
+}
+/* 戦略名は外部リンク。文字色は変えず、ホバー時のみ下線を出す（既存の .hover-underline と同じ挙動） */
+a.header__logo-sub:hover {
+  color: var(--text-light);
+  text-decoration: underline;
+}
+/* ロゴ画像のリンクはホバーで変化させない */
+.header__logo-link:hover {
+  text-decoration: none;
 }
 .header__nav {
   display: flex;
@@ -1056,6 +1076,10 @@ tr:nth-child(even) {
   :root {
     --header-height: 60px;
   }
+  /* SPではヘッダーのお問合せボタンを出さない（モバイルナビ内の項目で代替） */
+  .header__actions .btn {
+    display: none;
+  }
   .section {
     padding: 48px 0;
   }
@@ -1103,6 +1127,10 @@ tr:nth-child(even) {
   }
 }
 @media (max-width: 480px) {
+  /* 狭幅ではロゴ下のサブ文字の左詰めを解除し、ヘッダーの横溢れを防ぐ */
+  .header__logo-sub {
+    padding-left: 0;
+  }
   .persona-grid {
     grid-template-columns: 1fr;
   }
@@ -1116,6 +1144,12 @@ tr:nth-child(even) {
     grid-template-columns: 1fr !important;
   }
 }
+/* 極狭幅（iPhone SE 等 320px）ではロゴを縮めてヘッダーの横溢れを防ぐ */
+@media (max-width: 360px) {
+  .header__logo img {
+    height: 32px;
+  }
+}
 /* --- 写真ライトボックス（拡大表示） --- */
 .photo-item__zoom {
   display: block;
@@ -1124,6 +1158,15 @@ tr:nth-child(even) {
   border: none;
   background: none;
   cursor: zoom-in;
+}
+.photo-save-note {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--text-light);
+  margin: -16px 0 32px;
+}
+.photo-save-note strong {
+  color: var(--primary);
 }
 .lightbox {
   position: fixed;
@@ -1162,4 +1205,56 @@ tr:nth-child(even) {
 .lightbox__close:hover,
 .lightbox__close:focus-visible {
   background: rgba(255, 255, 255, 0.32);
+}
+/* --- 写真 個別保存ボタン・一括DL --- */
+.photo-item {
+  position: relative; /* 個別保存ボタンの基準点 */
+}
+.photo-item__save {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.62);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  line-height: 1.6;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: auto;
+}
+.photo-item:hover .photo-item__save,
+.photo-item__save:focus-visible {
+  opacity: 1;
+}
+.photo-bulk-dl {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+.photo-bulk-dl__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 10px 22px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+.photo-bulk-dl__btn:hover {
+  background: var(--primary-light);
+}
+.photo-bulk-dl__btn:disabled {
+  opacity: 0.65;
+  cursor: wait;
 }

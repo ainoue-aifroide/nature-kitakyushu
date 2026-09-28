@@ -91,6 +91,9 @@
     .terms-list li + li {
       margin-top: 6px;
     }
+    .terms-list li {
+      overflow-wrap: anywhere;      
+    }    
     .terms-credit {
       display: block;
       margin-top: 6px;
@@ -264,6 +267,7 @@
     }
     .btn--submit {
       min-width: 240px;
+      max-width: 100%;
     }
     .btn--submit:disabled {
       opacity: 0.4;
@@ -295,9 +299,9 @@
   <!-- ヘッダー -->
   <header class="header">
     <div class="header__inner">
-      <a href="../" class="header__logo">
-        <img src="../images/2026/02/logo.png" alt="アーバンネイチャー北九州" width="160" height="40"><span class="header__logo-sub" aria-hidden="true">北九州市生物多様性戦略 2025–2030</span>
-      </a>
+      <div class="header__logo">
+        <a href="../" class="header__logo-link"><img src="../images/2026/02/logo.png" alt="アーバンネイチャー北九州" width="160" height="40"></a><a class="header__logo-sub" href="https://www.city.kitakyushu.lg.jp/contents/924_02006.html" target="_blank" rel="noopener noreferrer">北九州市生物多様性戦略 2025–2030<span class="sr-only">（北九州市公式サイト・新しいタブで開きます）</span></a>
+      </div>
       <nav class="header__nav" aria-label="メインナビゲーション">
         <a href="../news/">お知らせ</a>
         <div class="nav-item">
@@ -311,10 +315,11 @@
           </ul>
         </div>
         <div class="nav-item">
-          <a href="../network/">地域との繋がり</a>
+          <a href="../network/">ネットワーク</a>
           <ul class="dropdown">
             <li><a href="../network/">北九州ネイチャーポジティブネットワーク</a></li>
-            <li><a href="../join/">会員募集</a></li>
+            <li><a href="../network/projects/">企業参加型プロジェクト</a></li>
+            
           </ul>
         </div>
         <div class="nav-item">
@@ -322,7 +327,7 @@
           <ul class="dropdown">
             <li><a href="../network/cases/">ネイチャーポジティブ実践事例</a></li>
             <li><a href="../blog/">企業の活動ブログ</a></li>
-            <li><a href="../blog/">団体等の活動ブログ</a></li>
+            <li><a href="../blog/organization.html">団体等の活動ブログ</a></li>
           </ul>
         </div>
         <a href="../events/">イベントを探す</a>
@@ -350,20 +355,21 @@
         <a href="../about/">全体像</a>
         <a href="../about/biodiversity.html">生物多様性とは？</a>
         <a href="../about/strategy.html">北九州市の取組</a>
-        <a href="../about/spots.html">北九州市の自然スポット</a>
         <a href="../center/">活動拠点</a>
+        <a href="../about/spots.html">北九州市の自然スポット</a>
       </div>
     </div>
     <div class="mobile-nav__group">
       <div class="mobile-nav__parent">
-        <a href="../network/">地域との繋がり</a>
+        <a href="../network/">ネットワーク</a>
         <button class="mobile-nav__toggle" aria-expanded="false" aria-label="サブメニューを開く">
           <span class="mobile-nav__toggle-icon"></span>
         </button>
       </div>
       <div class="mobile-nav__children">
         <a href="../network/">北九州ネイチャーポジティブネットワーク</a>
-        <a href="../join/">会員募集</a>
+        <a href="../network/projects/">企業参加型プロジェクト</a>
+        
       </div>
     </div>
     <div class="mobile-nav__group">
@@ -376,11 +382,12 @@
       <div class="mobile-nav__children">
         <a href="../network/cases/">ネイチャーポジティブ実践事例</a>
         <a href="../blog/">企業の活動ブログ</a>
-        <a href="../blog/">団体等の活動ブログ</a>
+        <a href="../blog/organization.html">団体等の活動ブログ</a>
       </div>
     </div>
     <a href="../events/">イベントを探す</a>
     <a href="../photos/">みんなの写真展</a>
+    <a href="../contact/">お問合せ</a>
     <div class="mobile-nav__cta">
       <a href="../join/" class="btn btn--primary btn--block">参加する</a>
     </div>
@@ -396,7 +403,7 @@
     </div>
   </nav>
   <!-- ページヘッダー -->
-  <div class="page-header" style="background-image: url('../images/2025/03/nature2.jpg'); background-size: cover; background-position: center center;">
+  <div class="page-header" style="background-image: url('../images/2025/03/sarakurayama.jpg'); background-size: cover; background-position: center center;">
     <div class="container">
       <h1 class="page-header__title">写真を投稿する</h1>
       <p class="page-header__desc">北九州市の自然写真を是非アーカイブにご提供ください！</p>
@@ -413,62 +420,59 @@
             利用規約
           </div>
           <div class="terms-box__body">
-            <p class="terms-lead">当サイトで配布されている写真素材（以下、「本素材」といいます）は、以下の利用規約に同意の上でご利用ください。素材をダウンロードまたは使用した時点で、下記の内容に同意したものとみなします。</p>
+            <p class="terms-lead">「みんなの写真展」に写真を投稿するにあたり、以下の利用規約をお読みください。投稿をもって、下記の内容に同意したものとみなします。</p>
             <div class="terms-item">
               <div class="terms-item__num">1</div>
               <div class="terms-item__text">
                 <strong>著作権について</strong>
                 <ul class="terms-list">
-                  <li>本素材の著作権は 北九州市 に帰属します。</li>
-                  <li>本素材は、著作権を放棄するものではありません。</li>
+                  <li>投稿写真の著作権は投稿者に帰属します。</li>
+                  <li>投稿者は、北九州市に対して、投稿写真を日本国内外を問わず無償で非独占的に使用する（複製、公開、送信、頒布、譲渡、貸与、翻訳、翻案を含む）権利（サブライセンス権を含む）を許諾するものとします。</li>
+                  <li>投稿者は著作者人格権を北九州市に対して行使しないものとします。</li>
                 </ul>
               </div>
             </div>
             <div class="terms-item">
               <div class="terms-item__num">2</div>
               <div class="terms-item__text">
-                <strong>利用可能な範囲</strong>
-                <p>以下の用途で、本素材を無料でご利用いただけます</p>
+                <strong>利用用途について</strong>
                 <ul class="terms-list">
-                  <li>商用・非商用問わず使用可能</li>
-                  <li>印刷物（チラシ、ポスター、書籍など）での使用</li>
-                  <li>ウェブサイト、SNS、動画、テレビ放送、アプリ等での使用</li>
-                  <li>トリミングや色調補正などの加工も可能</li>
+                  <li>北九州市は、投稿写真をアーバンネイチャー北九州ポータルサイトへの掲載をはじめ、広報・PR・教育・研究等の用途に商用・非商用を問わず制限なく利用することができます。</li>
+                  <li>トリミングや色調補正などの加工も北九州市の判断で行うことができます。</li>
                 </ul>
               </div>
             </div>
             <div class="terms-item">
               <div class="terms-item__num">3</div>
               <div class="terms-item__text">
-                <strong>クレジット表記について（必須）</strong>
+                <strong>クレジット表記について</strong>
                 <ul class="terms-list">
-                  <li>ご利用の際は、必ず以下のクレジットを明記してください
+                  <li>北九州市が投稿写真を使用する際は、可能な範囲で以下のクレジットを表記します。
                     <span class="terms-credit">「写真提供：(C)北九州市」または「(C)北九州市」または「(C)City of Kitakyushu」</span>
                   </li>
-                  <li>表記位置は、写真の近くまたは使用ページの下部など、第三者が認識できる場所としてください。</li>
-                  <li>表記が難しい場合は、事前にお問い合わせください。Eメール：<a href="mailto:kan-naturepositive@city.kitakyushu.lg.jp">kan-naturepositive@city.kitakyushu.lg.jp</a></li>
+                  <li>媒体の性質上クレジット表記が困難な場合は、省略することがあります。</li>
                 </ul>
               </div>
             </div>
             <div class="terms-item">
               <div class="terms-item__num">4</div>
               <div class="terms-item__text">
-                <strong>使用報告について（任意）</strong>
+                <strong>投稿上の注意事項</strong>
                 <ul class="terms-list">
-                  <li>使用報告は必須ではありませんが、どのようにご活用いただいたかご連絡いただけると、今後の活動の励みになります。よろしければ、Eメール：<a href="mailto:kan-naturepositive@city.kitakyushu.lg.jp">kan-naturepositive@city.kitakyushu.lg.jp</a>にご連絡ください。</li>
+                  <li>投稿できるのは、ご自身が撮影した写真に限ります。</li>
+                  <li>人物が映り込んでいる場合は、事前に本人の同意を得てください。</li>
+                  <li>第三者の著作権・肖像権・プライバシーを侵害する写真の投稿は禁止します。</li>
+                  <li>公序良俗に反する内容の投稿は禁止します。</li>
                 </ul>
               </div>
             </div>
             <div class="terms-item">
               <div class="terms-item__num">5</div>
               <div class="terms-item__text">
-                <strong>禁止事項</strong>
-                <p>以下の行為は禁止します</p>
+                <strong>投稿写真の管理</strong>
                 <ul class="terms-list">
-                  <li>本素材自体の再配布、販売、譲渡（加工後も含む）</li>
-                  <li>本素材を公序良俗に反する目的で使用すること</li>
-                  <li>北九州市が特定の商品・サービスを推奨・保証しているかのように誤解を与える使用</li>
-                  <li>著作権表記の削除・隠蔽</li>
+                  <li>北九州市は、不適切と判断した投稿写真を予告なく削除することができます。</li>
+                  <li>本サービスの終了等に伴い、投稿写真が削除される場合があります。</li>
                 </ul>
               </div>
             </div>
@@ -477,7 +481,7 @@
               <div class="terms-item__text">
                 <strong>免責事項</strong>
                 <ul class="terms-list">
-                  <li>本素材の使用に関連して発生したいかなる損害やトラブルについても、北九州市は責任を負いません。</li>
+                  <li>投稿写真の内容に起因して生じたトラブル・損害については、投稿者自身が責任を負うものとします。</li>
                   <li>本サイトの内容や利用規約は、予告なく変更されることがあります。</li>
                 </ul>
               </div>
@@ -486,7 +490,7 @@
               <div class="terms-item__num">7</div>
               <div class="terms-item__text">
                 <strong>お問い合わせ</strong>
-                <p>利用に関するご質問・ご相談は、Eメール：<a href="mailto:kan-naturepositive@city.kitakyushu.lg.jp">kan-naturepositive@city.kitakyushu.lg.jp</a>にご連絡ください。</p>
+                <p>投稿に関するご質問・ご相談は、Eメール：<a href="mailto:kan-naturepositive@city.kitakyushu.lg.jp">kan-naturepositive@city.kitakyushu.lg.jp</a>にご連絡ください。</p>
               </div>
             </div>
           </div>
@@ -588,18 +592,18 @@
             <a href="../center/">活動拠点</a>
             <a href="../about/spots.html">北九州市の自然スポット</a>
           </div>
-          <h3 class="footer__heading" style="margin-top:24px">地域との繋がり</h3>
+          <h3 class="footer__heading" style="margin-top:24px">ネットワーク</h3>
           <div class="footer__links">
             <a href="../network/">北九州ネイチャーポジティブ<br class="footer__br">ネットワーク</a>
-            <a href="../join/">会員募集</a>
+            <a href="../network/projects/">企業参加型プロジェクト</a>
           </div>
         </div>
         <div>
-          <h3 class="footer__heading" style="margin-top:24px">活動紹介</h3>
+          <h3 class="footer__heading">活動紹介</h3>
           <div class="footer__links">
             <a href="../network/cases/">ネイチャーポジティブ実践事例</a>
             <a href="../blog/">企業の活動ブログ</a>
-            <a href="../blog/">団体等の活動ブログ</a>
+            <a href="../blog/organization.html">団体等の活動ブログ</a>
           </div>
         </div>
         <div>
@@ -615,7 +619,6 @@
       </div>
       <div class="footer__bottom">
         <span>Copyright (C) 2026 CITY OF KITAKYUSHU All Rights Reserved.</span>
-        <a href="../privacy/">プライバシーポリシー</a>
       </div>
     </div>
   </footer>

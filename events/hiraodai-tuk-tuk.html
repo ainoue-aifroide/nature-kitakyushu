@@ -91,6 +91,8 @@
     @media (max-width: 900px) {
       .ev-layout { grid-template-columns: 1fr; }
       .ev-summary { position: static; }
+      /* SP: 開催概要を本文より前に出す。order はグリッド直下の子(aside)に効かせる */
+      .ev-layout > aside { order: -1; }
       .ev-hero__title { font-size: 1.5rem; }
     }
     @media (max-width: 600px) {
@@ -99,6 +101,18 @@
       .ev-apply { padding: 28px 20px; }
       .ev-apply__btn { font-size: 1rem; padding: 16px 28px; }
     }
+    /* SP: ヒーローの高さを画像とテキストの高い方に合わせ、タグ・タイトルのはみ出しを防ぐ */
+    @media (max-width: 900px) {
+      .ev-hero { display: grid; }
+      .ev-hero__img { grid-area: 1 / 1; width: 100%; height: 100%; max-height: 480px; object-fit: cover; }
+      .ev-hero__overlay { grid-area: 1 / 1; position: relative; inset: auto; padding-top: 24px; padding-bottom: 24px; }
+    }
+    /* SP: グリッド項目が中身の最小幅に押し広げられ、横にはみ出すのを防ぐ */
+    @media (max-width: 900px) {
+      .ev-layout > * { min-width: 0; }
+      .ev-apply__btn { max-width: 100%; }
+      .ev-schedule__time { flex-shrink: 0; }
+    }
   </style>
 </head>
 <body>
@@ -106,9 +120,9 @@
   <!-- ヘッダー -->
   <header class="header">
     <div class="header__inner">
-      <a href="../" class="header__logo">
-        <img src="../images/2026/02/logo.png" alt="アーバンネイチャー北九州" width="160" height="40"><span class="header__logo-sub" aria-hidden="true">北九州市生物多様性戦略 2025–2030</span>
-      </a>
+      <div class="header__logo">
+        <a href="../" class="header__logo-link"><img src="../images/2026/02/logo.png" alt="アーバンネイチャー北九州" width="160" height="40"></a><a class="header__logo-sub" href="https://www.city.kitakyushu.lg.jp/contents/924_02006.html" target="_blank" rel="noopener noreferrer">北九州市生物多様性戦略 2025–2030<span class="sr-only">（北九州市公式サイト・新しいタブで開きます）</span></a>
+      </div>
       <nav class="header__nav" aria-label="メインナビゲーション">
         <a href="../news/">お知らせ</a>
         <div class="nav-item">
@@ -122,10 +136,11 @@
           </ul>
         </div>
         <div class="nav-item">
-          <a href="../network/">地域との繋がり</a>
+          <a href="../network/">ネットワーク</a>
           <ul class="dropdown">
             <li><a href="../network/">北九州ネイチャーポジティブネットワーク</a></li>
-            <li><a href="../join/">会員募集</a></li>
+            <li><a href="../network/projects/">企業参加型プロジェクト</a></li>
+            
           </ul>
         </div>
         <div class="nav-item">
@@ -133,7 +148,7 @@
           <ul class="dropdown">
             <li><a href="../network/cases/">ネイチャーポジティブ実践事例</a></li>
             <li><a href="../blog/">企業の活動ブログ</a></li>
-            <li><a href="../blog/">団体等の活動ブログ</a></li>
+            <li><a href="../blog/organization.html">団体等の活動ブログ</a></li>
           </ul>
         </div>
         <a href="../events/" class="active">イベントを探す</a>
@@ -161,20 +176,21 @@
         <a href="../about/">全体像</a>
         <a href="../about/biodiversity.html">生物多様性とは？</a>
         <a href="../about/strategy.html">北九州市の取組</a>
-        <a href="../about/spots.html">北九州市の自然スポット</a>
         <a href="../center/">活動拠点</a>
+        <a href="../about/spots.html">北九州市の自然スポット</a>
       </div>
     </div>
     <div class="mobile-nav__group">
       <div class="mobile-nav__parent">
-        <a href="../network/">地域との繋がり</a>
+        <a href="../network/">ネットワーク</a>
         <button class="mobile-nav__toggle" aria-expanded="false" aria-label="サブメニューを開く">
           <span class="mobile-nav__toggle-icon"></span>
         </button>
       </div>
       <div class="mobile-nav__children">
         <a href="../network/">北九州ネイチャーポジティブネットワーク</a>
-        <a href="../join/">会員募集</a>
+        <a href="../network/projects/">企業参加型プロジェクト</a>
+        
       </div>
     </div>
     <div class="mobile-nav__group">
@@ -187,11 +203,12 @@
       <div class="mobile-nav__children">
         <a href="../network/cases/">ネイチャーポジティブ実践事例</a>
         <a href="../blog/">企業の活動ブログ</a>
-        <a href="../blog/">団体等の活動ブログ</a>
+        <a href="../blog/organization.html">団体等の活動ブログ</a>
       </div>
     </div>
     <a href="../events/">イベントを探す</a>
     <a href="../photos/">みんなの写真展</a>
+    <a href="../contact/">お問合せ</a>
     <div class="mobile-nav__cta">
       <a href="../join/" class="btn btn--primary btn--block">参加する</a>
     </div>
@@ -336,7 +353,7 @@
                   <td>2026年6月14日(日)<br>午前の部：10:00〜12:00<br>午後の部：13:00〜15:00</td>
                 </tr>
                 <tr>
-                  <th scope="row">集合場所</th>
+                  <th scope="row">場所</th>
                   <td>ソラランド平尾台 入口<br><small style='color:var(--text-light)'>北九州市小倉南区平尾台2丁目</small></td>
                 </tr>
                 <tr>
@@ -425,18 +442,18 @@
             <a href="../center/">活動拠点</a>
             <a href="../about/spots.html">北九州市の自然スポット</a>
           </div>
-          <h3 class="footer__heading" style="margin-top:24px">地域との繋がり</h3>
+          <h3 class="footer__heading" style="margin-top:24px">ネットワーク</h3>
           <div class="footer__links">
             <a href="../network/">北九州ネイチャーポジティブ<br class="footer__br">ネットワーク</a>
-            <a href="../join/">会員募集</a>
+            <a href="../network/projects/">企業参加型プロジェクト</a>
           </div>
         </div>
         <div>
-          <h3 class="footer__heading" style="margin-top:24px">活動紹介</h3>
+          <h3 class="footer__heading">活動紹介</h3>
           <div class="footer__links">
             <a href="../network/cases/">ネイチャーポジティブ実践事例</a>
             <a href="../blog/">企業の活動ブログ</a>
-            <a href="../blog/">団体等の活動ブログ</a>
+            <a href="../blog/organization.html">団体等の活動ブログ</a>
           </div>
         </div>
         <div>
@@ -452,7 +469,6 @@
       </div>
       <div class="footer__bottom">
         <span>Copyright (C) 2026 CITY OF KITAKYUSHU All Rights Reserved.</span>
-        <a href="../privacy/">プライバシーポリシー</a>
       </div>
     </div>
   </footer>

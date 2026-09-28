@@ -38,9 +38,9 @@
   <!-- ヘッダー -->
   <header class="header">
     <div class="header__inner">
-      <a href="../" class="header__logo">
-        <img src="../images/2026/02/logo.png" alt="アーバンネイチャー北九州" width="160" height="40"><span class="header__logo-sub" aria-hidden="true">北九州市生物多様性戦略 2025–2030</span>
-      </a>
+      <div class="header__logo">
+        <a href="../" class="header__logo-link"><img src="../images/2026/02/logo.png" alt="アーバンネイチャー北九州" width="160" height="40"></a><a class="header__logo-sub" href="https://www.city.kitakyushu.lg.jp/contents/924_02006.html" target="_blank" rel="noopener noreferrer">北九州市生物多様性戦略 2025–2030<span class="sr-only">（北九州市公式サイト・新しいタブで開きます）</span></a>
+      </div>
             <nav class="header__nav" aria-label="メインナビゲーション">
         <a href="../news/" >お知らせ</a>
         <div class="nav-item">
@@ -54,18 +54,19 @@
           </ul>
         </div>
         <div class="nav-item">
-          <a href="../network/" >地域との繋がり</a>
+          <a href="../network/" >ネットワーク</a>
           <ul class="dropdown">
             <li><a href="../network/">北九州ネイチャーポジティブネットワーク</a></li>
-            <li><a href="../join/">会員募集</a></li>
+            <li><a href="../network/projects/">企業参加型プロジェクト</a></li>
+            
           </ul>
         </div>
         <div class="nav-item">
           <a href="../network/cases/">活動紹介</a>
           <ul class="dropdown">
-            <li><a href="../network/cases/">NP実践事例</a></li>
+            <li><a href="../network/cases/">ネイチャーポジティブ実践事例</a></li>
             <li><a href="../blog/">企業の活動ブログ</a></li>
-            <li><a href="../blog/">団体等の活動ブログ</a></li>
+            <li><a href="../blog/organization.html">団体等の活動ブログ</a></li>
           </ul>
         </div>
         <a href="../events/" >イベントを探す</a>
@@ -93,20 +94,21 @@
         <a href="../about/">全体像</a>
         <a href="../about/biodiversity.html">生物多様性とは？</a>
         <a href="../about/strategy.html">北九州市の取組</a>
-        <a href="../about/spots.html">北九州市の自然スポット</a>
         <a href="../center/">活動拠点</a>
+        <a href="../about/spots.html">北九州市の自然スポット</a>
       </div>
     </div>
     <div class="mobile-nav__group">
       <div class="mobile-nav__parent">
-        <a href="../network/">地域との繋がり</a>
+        <a href="../network/">ネットワーク</a>
         <button class="mobile-nav__toggle" aria-expanded="false" aria-label="サブメニューを開く">
           <span class="mobile-nav__toggle-icon"></span>
         </button>
       </div>
       <div class="mobile-nav__children">
         <a href="../network/">北九州ネイチャーポジティブネットワーク</a>
-        <a href="../join/">会員募集</a>
+        <a href="../network/projects/">企業参加型プロジェクト</a>
+        
       </div>
     </div>
     <div class="mobile-nav__group">
@@ -117,13 +119,14 @@
         </button>
       </div>
       <div class="mobile-nav__children">
-        <a href="../network/cases/">NP実践事例</a>
+        <a href="../network/cases/">ネイチャーポジティブ実践事例</a>
         <a href="../blog/">企業の活動ブログ</a>
-        <a href="../blog/">団体等の活動ブログ</a>
+        <a href="../blog/organization.html">団体等の活動ブログ</a>
       </div>
     </div>
     <a href="../events/">イベントを探す</a>
     <a href="../photos/">みんなの写真展</a>
+    <a href="../contact/">お問合せ</a>
     <div class="mobile-nav__cta">
       <a href="../join/" class="btn btn--primary btn--block">参加する</a>
     </div>
@@ -139,7 +142,7 @@
     </div>
   </nav>
   <!-- ページヘッダー -->
-  <div class="page-header" style="background-image: url('../images/2025/03/nature2.jpg'); background-size: cover; background-position: center center;">
+  <div class="page-header" style="background-image: url('../images/2025/03/sarakurayama.jpg'); background-size: cover; background-position: center center;">
     <div class="container">
       <h1 class="page-header__title">植物</h1>
       <p class="page-header__desc">北九州市の植物の写真</p>
@@ -149,63 +152,62 @@
   <section class="section section--white">
     <div class="container">
       <p style="text-align:center; font-size:1rem; line-height:1.8; color:var(--text-light); margin-bottom:32px;">
-        市民参加型の写真アーカイブです。無料素材としてお使いいただけます。<br>
-        写真をご提供いただける方は<a href="submit.html" style="color:var(--primary); font-weight:600; text-decoration:underline;">写真投稿フォームへ</a>。
+        写真アーカイブです。無料素材としてお使いいただけます。
       </p>
       <div class="usage-note">
-        <strong>ご利用について：</strong> 当サイトの写真素材を利用する場合は、<a href="submit.html#terms">コチラ</a>の事項に同意していただく必要がございます。 同意いただけない場合は利用できませんのでご注意ください。
+        <strong>ご利用について：</strong> 当サイトの写真素材を利用する場合は、<a href="../privacy/#photo-terms">コチラ</a>の事項に同意していただく必要がございます。 同意いただけない場合は利用できませんのでご注意ください。
       </div>
       <div class="photo-grid">
         <a class="photo-item" href="shiranoe-shokubutsu-kouen.html#cat=plant">
-          <img src="../images/photos/shiranoe-shokubutsu-kouen/IMG_5479.jpg" alt="" loading="lazy" decoding="async">
+          <img src="../images/photos/shiranoe-shokubutsu-kouen/IMG_5487.jpg" alt="" loading="lazy" decoding="async">
           <span class="photo-item__label">白野江植物公園</span>
         </a>
         <a class="photo-item" href="greenpark.html#cat=plant">
-          <img src="../images/photos/greenpark/APC_3533.jpg" alt="" loading="lazy" decoding="async">
+          <img src="../images/photos/greenpark/APC_6257.jpg" alt="" loading="lazy" decoding="async">
           <span class="photo-item__label">グリーンパーク</span>
         </a>
         <a class="photo-item" href="kurosaki-jouseki-sakura.html#cat=plant">
-          <img src="../images/photos/kurosaki-jouseki-sakura/IMG_4214.jpg" alt="" loading="lazy" decoding="async">
+          <img src="../images/photos/kurosaki-jouseki-sakura/IMG_6702.jpg" alt="" loading="lazy" decoding="async">
           <span class="photo-item__label">黒崎城跡　桜</span>
         </a>
         <a class="photo-item" href="kanougaoka-kouen.html#cat=plant">
-          <img src="../images/photos/kanougaoka-kouen/IMG_8811.jpg" alt="" loading="lazy" decoding="async">
+          <img src="../images/photos/kanougaoka-kouen/IMG_8814.jpg" alt="" loading="lazy" decoding="async">
           <span class="photo-item__label">花農丘公園　総合農事センター</span>
         </a>
         <a class="photo-item" href="mojiko-sakura.html#cat=plant">
-          <img src="../images/photos/mojiko-sakura/IMG_2002.jpg" alt="" loading="lazy" decoding="async">
+          <img src="../images/photos/mojiko-sakura/IMG_2038.jpg" alt="" loading="lazy" decoding="async">
           <span class="photo-item__label">門司港　桜</span>
         </a>
         <a class="photo-item" href="plant1.html#cat=plant">
-          <img src="../images/photos/plant1/アキカラマツ.jpg" alt="" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ﾋｵｳｷﾞ.jpg" alt="" loading="lazy" decoding="async">
           <span class="photo-item__label">植物1</span>
         </a>
         <a class="photo-item" href="plant2.html#cat=plant">
-          <img src="../images/photos/plant2/イワガラミ.jpg" alt="" loading="lazy" decoding="async">
+          <img src="../images/photos/plant2/ﾌﾃﾞﾘﾝﾄﾞｳ.jpg" alt="" loading="lazy" decoding="async">
           <span class="photo-item__label">植物2</span>
         </a>
         <a class="photo-item" href="plant3.html#cat=plant">
-          <img src="../images/photos/plant3/CIMG2895.jpg" alt="" loading="lazy" decoding="async">
+          <img src="../images/photos/plant3/ﾅｷﾞﾅﾀｺｳｼﾞｭ.jpg" alt="" loading="lazy" decoding="async">
           <span class="photo-item__label">植物3</span>
         </a>
         <a class="photo-item" href="plant4.html#cat=plant">
-          <img src="../images/photos/plant4/IMG_1946.jpg" alt="" loading="lazy" decoding="async">
+          <img src="../images/photos/plant4/IMG_2265.jpg" alt="" loading="lazy" decoding="async">
           <span class="photo-item__label">植物4</span>
         </a>
         <a class="photo-item" href="plant5.html#cat=plant">
-          <img src="../images/photos/plant5/02キキョウ.jpg" alt="" loading="lazy" decoding="async">
+          <img src="../images/photos/plant5/カノコソウ.jpg" alt="" loading="lazy" decoding="async">
           <span class="photo-item__label">植物5</span>
         </a>
         <a class="photo-item" href="sone-higata1.html#cat=plant">
-          <img src="../images/photos/sone-higata1/20250325_010353576.jpg" alt="" loading="lazy" decoding="async">
+          <img src="../images/photos/sone-higata1/IMG_8742.jpg" alt="" loading="lazy" decoding="async">
           <span class="photo-item__label">曽根干潟1</span>
         </a>
         <a class="photo-item" href="kokura-castle-sakura.html#cat=plant">
-          <img src="../images/photos/kokura-castle-sakura/IMG_8901.jpg" alt="" loading="lazy" decoding="async">
+          <img src="../images/photos/kokura-castle-sakura/IMG_9050.jpg" alt="" loading="lazy" decoding="async">
           <span class="photo-item__label">小倉城　桜</span>
         </a>
         <a class="photo-item" href="katsuyama-kouen-sakura.html#cat=plant">
-          <img src="../images/photos/katsuyama-kouen-sakura/IMG_8826.jpg" alt="" loading="lazy" decoding="async">
+          <img src="../images/photos/katsuyama-kouen-sakura/IMG_8828.jpg" alt="" loading="lazy" decoding="async">
           <span class="photo-item__label">勝山公園　桜</span>
         </a>
         <a class="photo-item" href="auma-no-chikurin.html#cat=plant">
@@ -213,11 +215,11 @@
           <span class="photo-item__label">合馬の竹林</span>
         </a>
         <a class="photo-item" href="asano-shiokaze-kouen.html#cat=plant">
-          <img src="../images/photos/asano-shiokaze-kouen/IMG_8910.jpg" alt="" loading="lazy" decoding="async">
+          <img src="../images/photos/asano-shiokaze-kouen/IMG_8920.jpg" alt="" loading="lazy" decoding="async">
           <span class="photo-item__label">あさの汐風公園　桜　噴水</span>
         </a>
         <a class="photo-item" href="shiigawa-sakura.html#cat=plant">
-          <img src="../images/photos/shiigawa-sakura/IMG_8999.jpg" alt="" loading="lazy" decoding="async">
+          <img src="../images/photos/shiigawa-sakura/IMG_9012.jpg" alt="" loading="lazy" decoding="async">
           <span class="photo-item__label">志井川　桜</span>
         </a>
       </div>
@@ -249,18 +251,18 @@
             <a href="../center/">活動拠点</a>
             <a href="../about/spots.html">北九州市の自然スポット</a>
           </div>
-          <h3 class="footer__heading" style="margin-top:24px">地域との繋がり</h3>
+          <h3 class="footer__heading" style="margin-top:24px">ネットワーク</h3>
           <div class="footer__links">
             <a href="../network/">北九州ネイチャーポジティブ<br class="footer__br">ネットワーク</a>
-            <a href="../join/">会員募集</a>
+            <a href="../network/projects/">企業参加型プロジェクト</a>
           </div>
         </div>
         <div>
-          <h3 class="footer__heading" style="margin-top:24px">活動紹介</h3>
+          <h3 class="footer__heading">活動紹介</h3>
           <div class="footer__links">
-            <a href="../network/cases/">NP実践事例</a>
+            <a href="../network/cases/">ネイチャーポジティブ実践事例</a>
             <a href="../blog/">企業の活動ブログ</a>
-            <a href="../blog/">団体等の活動ブログ</a>
+            <a href="../blog/organization.html">団体等の活動ブログ</a>
           </div>
         </div>
         <div>
@@ -276,7 +278,6 @@
       </div>
       <div class="footer__bottom">
         <span>Copyright (C) 2026 CITY OF KITAKYUSHU All Rights Reserved.</span>
-        <a href="../privacy/">プライバシーポリシー</a>
       </div>
     </div>
   </footer>

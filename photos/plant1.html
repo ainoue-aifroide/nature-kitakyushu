@@ -38,9 +38,9 @@
   <!-- ヘッダー -->
   <header class="header">
     <div class="header__inner">
-      <a href="../" class="header__logo">
-        <img src="../images/2026/02/logo.png" alt="アーバンネイチャー北九州" width="160" height="40"><span class="header__logo-sub" aria-hidden="true">北九州市生物多様性戦略 2025–2030</span>
-      </a>
+      <div class="header__logo">
+        <a href="../" class="header__logo-link"><img src="../images/2026/02/logo.png" alt="アーバンネイチャー北九州" width="160" height="40"></a><a class="header__logo-sub" href="https://www.city.kitakyushu.lg.jp/contents/924_02006.html" target="_blank" rel="noopener noreferrer">北九州市生物多様性戦略 2025–2030<span class="sr-only">（北九州市公式サイト・新しいタブで開きます）</span></a>
+      </div>
             <nav class="header__nav" aria-label="メインナビゲーション">
         <a href="../news/" >お知らせ</a>
         <div class="nav-item">
@@ -54,18 +54,19 @@
           </ul>
         </div>
         <div class="nav-item">
-          <a href="../network/" >地域との繋がり</a>
+          <a href="../network/" >ネットワーク</a>
           <ul class="dropdown">
             <li><a href="../network/">北九州ネイチャーポジティブネットワーク</a></li>
-            <li><a href="../join/">会員募集</a></li>
+            <li><a href="../network/projects/">企業参加型プロジェクト</a></li>
+            
           </ul>
         </div>
         <div class="nav-item">
           <a href="../network/cases/">活動紹介</a>
           <ul class="dropdown">
-            <li><a href="../network/cases/">NP実践事例</a></li>
+            <li><a href="../network/cases/">ネイチャーポジティブ実践事例</a></li>
             <li><a href="../blog/">企業の活動ブログ</a></li>
-            <li><a href="../blog/">団体等の活動ブログ</a></li>
+            <li><a href="../blog/organization.html">団体等の活動ブログ</a></li>
           </ul>
         </div>
         <a href="../events/" >イベントを探す</a>
@@ -93,20 +94,21 @@
         <a href="../about/">全体像</a>
         <a href="../about/biodiversity.html">生物多様性とは？</a>
         <a href="../about/strategy.html">北九州市の取組</a>
-        <a href="../about/spots.html">北九州市の自然スポット</a>
         <a href="../center/">活動拠点</a>
+        <a href="../about/spots.html">北九州市の自然スポット</a>
       </div>
     </div>
     <div class="mobile-nav__group">
       <div class="mobile-nav__parent">
-        <a href="../network/">地域との繋がり</a>
+        <a href="../network/">ネットワーク</a>
         <button class="mobile-nav__toggle" aria-expanded="false" aria-label="サブメニューを開く">
           <span class="mobile-nav__toggle-icon"></span>
         </button>
       </div>
       <div class="mobile-nav__children">
         <a href="../network/">北九州ネイチャーポジティブネットワーク</a>
-        <a href="../join/">会員募集</a>
+        <a href="../network/projects/">企業参加型プロジェクト</a>
+        
       </div>
     </div>
     <div class="mobile-nav__group">
@@ -117,13 +119,14 @@
         </button>
       </div>
       <div class="mobile-nav__children">
-        <a href="../network/cases/">NP実践事例</a>
+        <a href="../network/cases/">ネイチャーポジティブ実践事例</a>
         <a href="../blog/">企業の活動ブログ</a>
-        <a href="../blog/">団体等の活動ブログ</a>
+        <a href="../blog/organization.html">団体等の活動ブログ</a>
       </div>
     </div>
     <a href="../events/">イベントを探す</a>
     <a href="../photos/">みんなの写真展</a>
+    <a href="../contact/">お問合せ</a>
     <div class="mobile-nav__cta">
       <a href="../join/" class="btn btn--primary btn--block">参加する</a>
     </div>
@@ -140,7 +143,7 @@
     </div>
   </nav>
   <!-- ページヘッダー -->
-  <div class="page-header" style="background-image: url('../images/2025/03/nature2.jpg'); background-size: cover; background-position: center center;">
+  <div class="page-header" style="background-image: url('../images/2025/03/sarakurayama.jpg'); background-size: cover; background-position: center center;">
     <div class="container">
       <h1 class="page-header__title">植物1</h1>
       <p class="page-header__desc">植物1の写真</p>
@@ -150,12 +153,12 @@
   <section class="section section--white">
     <div class="container">
       <p style="text-align:center; font-size:1rem; line-height:1.8; color:var(--text-light); margin-bottom:32px;">
-        市民参加型の写真アーカイブです。無料素材としてお使いいただけます。<br>
-        写真をご提供いただける方は<a href="submit.html" style="color:var(--primary); font-weight:600; text-decoration:underline;">写真投稿フォームへ</a>。
+        写真アーカイブです。無料素材としてお使いいただけます。
       </p>
       <div class="usage-note">
-        <strong>ご利用について：</strong> 当サイトの写真素材を利用する場合は、<a href="submit.html#terms">コチラ</a>の事項に同意していただく必要がございます。 同意いただけない場合は利用できませんのでご注意ください。
+        <strong>ご利用について：</strong> 当サイトの写真素材を利用する場合は、<a href="../privacy/#photo-terms">コチラ</a>の事項に同意していただく必要がございます。 同意いただけない場合は利用できませんのでご注意ください。
       </div>
+
       <div class="photo-grid">
         <div class="photo-item">
           <img src="../images/photos/plant1/アキカラマツ.jpg" alt="植物1の写真1" loading="lazy" decoding="async">
@@ -164,160 +167,157 @@
           <img src="../images/photos/plant1/イヌハギ.jpg" alt="植物1の写真2" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/カセンソウ.jpg" alt="植物1の写真3" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ｳﾊﾞﾕﾘ.jpg" alt="植物1の写真3" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/コオニユリ.jpg" alt="植物1の写真4" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ｵｵﾁｬﾙﾒﾙｿｳ09.jpg" alt="植物1の写真4" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/サギソウ.jpg" alt="植物1の写真5" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ｵｶﾄﾗﾉｵ.jpg" alt="植物1の写真5" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ニガナ.jpg" alt="植物1の写真6" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ｵﾆﾀﾋﾞﾗｺ05.jpg" alt="植物1の写真6" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ネジバナ.jpg" alt="植物1の写真7" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ｶﾞｶﾞｲﾓ.jpg" alt="植物1の写真7" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ノヒメユリ.jpg" alt="植物1の写真8" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/カセンソウ.jpg" alt="植物1の写真8" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ヒゴタイ.jpg" alt="植物1の写真9" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ｶﾗｽﾋﾞｼｬｸ11.jpg" alt="植物1の写真9" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/モウセンゴケ.jpg" alt="植物1の写真10" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ｷｷｮｳ.jpg" alt="植物1の写真10" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ヤマツツジ.jpg" alt="植物1の写真11" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ｷｸｲﾓ.jpg" alt="植物1の写真11" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ｳﾊﾞﾕﾘ.jpg" alt="植物1の写真12" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ｸﾙﾏﾊﾞﾅ.jpg" alt="植物1の写真12" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ｵｵﾁｬﾙﾒﾙｿｳ09.jpg" alt="植物1の写真13" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/コオニユリ.jpg" alt="植物1の写真13" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ｵｶﾄﾗﾉｵ.jpg" alt="植物1の写真14" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ｻｲﾊｲﾗﾝ.jpg" alt="植物1の写真14" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ｵﾆﾀﾋﾞﾗｺ05.jpg" alt="植物1の写真15" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ｻｲﾖｳｼｬｼﾞﾝ.jpg" alt="植物1の写真15" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ｶﾗｽﾋﾞｼｬｸ11.jpg" alt="植物1の写真16" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/サギソウ.jpg" alt="植物1の写真16" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ｶﾞｶﾞｲﾓ.jpg" alt="植物1の写真17" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ｻﾙﾄﾘｲﾊﾞﾗ.jpg" alt="植物1の写真17" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ｷｷｮｳ.jpg" alt="植物1の写真18" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ｼｵﾃﾞ.jpg" alt="植物1の写真18" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ｷｸｲﾓ.jpg" alt="植物1の写真19" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ｼﾞｼﾊﾞﾘ03.jpg" alt="植物1の写真19" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ｸﾙﾏﾊﾞﾅ.jpg" alt="植物1の写真20" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ｽｽﾞｻｲｺ.jpg" alt="植物1の写真20" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ｻｲﾊｲﾗﾝ.jpg" alt="植物1の写真21" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ﾀﾇｷﾏﾒ.jpg" alt="植物1の写真21" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ｻｲﾖｳｼｬｼﾞﾝ.jpg" alt="植物1の写真22" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ﾂｷﾇｷｵﾄｷﾞﾘ.jpg" alt="植物1の写真22" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ｻﾙﾄﾘｲﾊﾞﾗ.jpg" alt="植物1の写真23" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ﾂﾕｸｻ02.jpg" alt="植物1の写真23" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ｼｵﾃﾞ.jpg" alt="植物1の写真24" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ﾂﾘﾌﾈｿｳ.jpg" alt="植物1の写真24" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ｼﾞｼﾊﾞﾘ03.jpg" alt="植物1の写真25" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ﾄｷｿｳ.jpg" alt="植物1の写真25" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ｽｽﾞｻｲｺ.jpg" alt="植物1の写真26" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ﾄﾞｸﾀﾞﾐ04.jpg" alt="植物1の写真26" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ﾀﾇｷﾏﾒ.jpg" alt="植物1の写真27" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ニガナ.jpg" alt="植物1の写真27" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ﾂｷﾇｷｵﾄｷﾞﾘ.jpg" alt="植物1の写真28" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ﾆﾜｾﾞｷｼｮｳ04.jpg" alt="植物1の写真28" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ﾂﾕｸｻ02.jpg" alt="植物1の写真29" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ネジバナ.jpg" alt="植物1の写真29" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ﾂﾘﾌﾈｿｳ.jpg" alt="植物1の写真30" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ﾈｼﾞﾊﾞﾅ05.jpg" alt="植物1の写真30" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ﾄｷｿｳ.jpg" alt="植物1の写真31" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ﾉﾊﾝｼｮｳﾌﾞ.jpg" alt="植物1の写真31" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ﾄﾞｸﾀﾞﾐ04.jpg" alt="植物1の写真32" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ノヒメユリ.jpg" alt="植物1の写真32" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ﾆﾜｾﾞｷｼｮｳ04.jpg" alt="植物1の写真33" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ﾋｵｳｷﾞ.jpg" alt="植物1の写真33" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ﾈｼﾞﾊﾞﾅ05.jpg" alt="植物1の写真34" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ﾋｷｵｺｼ.jpg" alt="植物1の写真34" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ﾉﾊﾝｼｮｳﾌﾞ.jpg" alt="植物1の写真35" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ヒゴタイ.jpg" alt="植物1の写真35" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ﾋｵｳｷﾞ.jpg" alt="植物1の写真36" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ﾋｺﾞﾀｲ２.jpg" alt="植物1の写真36" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ﾋｷｵｺｼ.jpg" alt="植物1の写真37" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ﾋﾒｳﾗｼﾏｿｳ.jpg" alt="植物1の写真37" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ﾋｺﾞﾀｲ２.jpg" alt="植物1の写真38" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ﾋﾒｼﾛﾈ.jpg" alt="植物1の写真38" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ﾋﾒｳﾗｼﾏｿｳ.jpg" alt="植物1の写真39" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ﾋﾒﾌｳﾛ06.jpg" alt="植物1の写真39" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ﾋﾒｼﾛﾈ.jpg" alt="植物1の写真40" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ﾌﾅﾊﾞﾗｿｳ04.jpg" alt="植物1の写真40" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ﾋﾒﾌｳﾛ06.jpg" alt="植物1の写真41" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ﾎｳﾁｬｸｿｳ.jpg" alt="植物1の写真41" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ﾌﾅﾊﾞﾗｿｳ04.jpg" alt="植物1の写真42" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ﾎﾀﾙｶｽﾞﾗ01.jpg" alt="植物1の写真42" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ﾎｳﾁｬｸｿｳ.jpg" alt="植物1の写真43" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ﾏﾙﾊﾞﾂﾕｸｻ.jpg" alt="植物1の写真43" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ﾎﾀﾙｶｽﾞﾗ01.jpg" alt="植物1の写真44" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ﾏﾙﾊﾞﾉﾎﾛｼ.jpg" alt="植物1の写真44" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ﾏﾙﾊﾞﾂﾕｸｻ.jpg" alt="植物1の写真45" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ﾐｼﾏｻｲｺ.jpg" alt="植物1の写真45" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ﾏﾙﾊﾞﾉﾎﾛｼ.jpg" alt="植物1の写真46" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ﾐｽﾞﾀﾏｿｳ.jpg" alt="植物1の写真46" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ﾐｼﾏｻｲｺ.jpg" alt="植物1の写真47" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ﾐﾐｶｷｸﾞｻ.jpg" alt="植物1の写真47" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ﾐｽﾞﾀﾏｿｳ.jpg" alt="植物1の写真48" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/モウセンゴケ.jpg" alt="植物1の写真48" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ﾐｽﾞﾄﾝﾎﾞ.jpg" alt="植物1の写真49" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ﾔﾌﾞｶﾞﾗｼ.jpg" alt="植物1の写真49" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ﾐﾐｶｷｸﾞｻ.jpg" alt="植物1の写真50" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ﾔﾌﾞﾗﾝ.jpg" alt="植物1の写真50" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ﾔﾌﾞｶﾞﾗｼ.jpg" alt="植物1の写真51" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ﾔﾏｱｼﾞｻｲ01.jpg" alt="植物1の写真51" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ﾔﾌﾞﾗﾝ.jpg" alt="植物1の写真52" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ヤマツツジ.jpg" alt="植物1の写真52" loading="lazy" decoding="async">
         </div>
         <div class="photo-item">
-          <img src="../images/photos/plant1/ﾔﾏｱｼﾞｻｲ01.jpg" alt="植物1の写真53" loading="lazy" decoding="async">
-        </div>
-        <div class="photo-item">
-          <img src="../images/photos/plant1/ﾜﾙﾅｽﾋﾞ.jpg" alt="植物1の写真54" loading="lazy" decoding="async">
+          <img src="../images/photos/plant1/ﾜﾙﾅｽﾋﾞ.jpg" alt="植物1の写真53" loading="lazy" decoding="async">
         </div>
       </div>
     </div>
@@ -348,18 +348,18 @@
             <a href="../center/">活動拠点</a>
             <a href="../about/spots.html">北九州市の自然スポット</a>
           </div>
-          <h3 class="footer__heading" style="margin-top:24px">地域との繋がり</h3>
+          <h3 class="footer__heading" style="margin-top:24px">ネットワーク</h3>
           <div class="footer__links">
             <a href="../network/">北九州ネイチャーポジティブ<br class="footer__br">ネットワーク</a>
-            <a href="../join/">会員募集</a>
+            <a href="../network/projects/">企業参加型プロジェクト</a>
           </div>
         </div>
         <div>
-          <h3 class="footer__heading" style="margin-top:24px">活動紹介</h3>
+          <h3 class="footer__heading">活動紹介</h3>
           <div class="footer__links">
-            <a href="../network/cases/">NP実践事例</a>
+            <a href="../network/cases/">ネイチャーポジティブ実践事例</a>
             <a href="../blog/">企業の活動ブログ</a>
-            <a href="../blog/">団体等の活動ブログ</a>
+            <a href="../blog/organization.html">団体等の活動ブログ</a>
           </div>
         </div>
         <div>
@@ -375,7 +375,6 @@
       </div>
       <div class="footer__bottom">
         <span>Copyright (C) 2026 CITY OF KITAKYUSHU All Rights Reserved.</span>
-        <a href="../privacy/">プライバシーポリシー</a>
       </div>
     </div>
   </footer>

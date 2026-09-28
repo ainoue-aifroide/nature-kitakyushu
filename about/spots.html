@@ -133,16 +133,23 @@
     <!-- ヘッダー -->
     <header class="header">
       <div class="header__inner">
-        <a href="../" class="header__logo">
-          <img
-            src="../images/2026/02/logo.png"
-            alt="アーバンネイチャー北九州"
-            width="160"
-            height="40"
-          /><span class="header__logo-sub" aria-hidden="true"
-            >北九州市生物多様性戦略 2025–2030</span
+        <div class="header__logo">
+          <a href="../" class="header__logo-link"
+            ><img
+              src="../images/2026/02/logo.png"
+              alt="アーバンネイチャー北九州"
+              width="160"
+              height="40" /></a
+          ><a
+            class="header__logo-sub"
+            href="https://www.city.kitakyushu.lg.jp/contents/924_02006.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            >北九州市生物多様性戦略 2025–2030<span class="sr-only"
+              >（北九州市公式サイト・新しいタブで開きます）</span
+            ></a
           >
-        </a>
+        </div>
         <nav class="header__nav" aria-label="メインナビゲーション">
           <a href="../news/">お知らせ</a>
           <div class="nav-item">
@@ -158,12 +165,13 @@
             </ul>
           </div>
           <div class="nav-item">
-            <a href="../network/">地域との繋がり</a>
+            <a href="../network/">ネットワーク</a>
             <ul class="dropdown">
               <li>
                 <a href="../network/">北九州ネイチャーポジティブネットワーク</a>
               </li>
-              <li><a href="../join/">会員募集</a></li>
+              <li><a href="../network/projects/">企業参加型プロジェクト</a></li>
+              
             </ul>
           </div>
           <div class="nav-item">
@@ -171,7 +179,7 @@
             <ul class="dropdown">
               <li><a href="../network/cases/">ネイチャーポジティブ実践事例</a></li>
               <li><a href="../blog/">企業の活動ブログ</a></li>
-              <li><a href="../blog/">団体等の活動ブログ</a></li>
+              <li><a href="../blog/organization.html">団体等の活動ブログ</a></li>
             </ul>
           </div>
           <a href="../events/">イベントを探す</a>
@@ -209,13 +217,13 @@
           <a href="../about/">全体像</a>
           <a href="../about/biodiversity.html">生物多様性とは？</a>
           <a href="../about/strategy.html">北九州市の取組</a>
-          <a href="../about/spots.html">北九州市の自然スポット</a>
           <a href="../center/">活動拠点</a>
+          <a href="../about/spots.html">北九州市の自然スポット</a>
         </div>
       </div>
       <div class="mobile-nav__group">
         <div class="mobile-nav__parent">
-          <a href="../network/">地域との繋がり</a>
+          <a href="../network/">ネットワーク</a>
           <button
             class="mobile-nav__toggle"
             aria-expanded="false"
@@ -226,7 +234,8 @@
         </div>
         <div class="mobile-nav__children">
           <a href="../network/">北九州ネイチャーポジティブネットワーク</a>
-          <a href="../join/">会員募集</a>
+          <a href="../network/projects/">企業参加型プロジェクト</a>
+          
         </div>
       </div>
       <div class="mobile-nav__group">
@@ -239,11 +248,12 @@
         <div class="mobile-nav__children">
           <a href="../network/cases/">ネイチャーポジティブ実践事例</a>
           <a href="../blog/">企業の活動ブログ</a>
-          <a href="../blog/">団体等の活動ブログ</a>
+          <a href="../blog/organization.html">団体等の活動ブログ</a>
         </div>
       </div>
       <a href="../events/">イベントを探す</a>
       <a href="../photos/">みんなの写真展</a>
+      <a href="../contact/">お問合せ</a>
       <div class="mobile-nav__cta">
         <a href="../join/" class="btn btn--primary btn--block">参加する</a>
       </div>
@@ -473,19 +483,19 @@
               <a href="../about/spots.html">北九州市の自然スポット</a>
             </div>
             <h3 class="footer__heading" style="margin-top: 24px">
-              地域との繋がり
+              ネットワーク
             </h3>
             <div class="footer__links">
               <a href="../network/">北九州ネイチャーポジティブ<br class="footer__br">ネットワーク</a>
-              <a href="../join/">会員募集</a>
+              <a href="../network/projects/">企業参加型プロジェクト</a>
             </div>
           </div>
           <div>
-            <h3 class="footer__heading" style="margin-top:24px">活動紹介</h3>
+            <h3 class="footer__heading">活動紹介</h3>
             <div class="footer__links">
               <a href="../network/cases/">ネイチャーポジティブ実践事例</a>
               <a href="../blog/">企業の活動ブログ</a>
-              <a href="../blog/">団体等の活動ブログ</a>
+              <a href="../blog/organization.html">団体等の活動ブログ</a>
             </div>
           </div>
           <div>
@@ -501,7 +511,6 @@
         </div>
         <div class="footer__bottom">
           <span>Copyright (C) 2026 CITY OF KITAKYUSHU All Rights Reserved.</span>
-          <a href="../privacy/">プライバシーポリシー</a>
         </div>
       </div>
     </footer>

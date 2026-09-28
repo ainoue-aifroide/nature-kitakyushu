@@ -693,6 +693,19 @@
           grid-template-columns: repeat(3, 1fr);
         }
       }
+      .video-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-top: 40px;
+      }
+      /* SP: 3列のままだと1枚94px幅になりテキスト版が読めないため縦1列にする */
+      @media (max-width: 768px) {
+        .video-grid {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+      }
       .video-transcript {
         margin-top: 6px;
       }
@@ -721,16 +734,23 @@
     <!-- ヘッダー -->
     <header class="header">
       <div class="header__inner">
-        <a href="./" class="header__logo">
-          <img
-            src="images/2026/02/logo.png"
-            alt="アーバンネイチャー北九州"
-            width="160"
-            height="40"
-          /><span class="header__logo-sub" aria-hidden="true"
-            >北九州市生物多様性戦略 2025–2030</span
+        <div class="header__logo">
+          <a href="./" class="header__logo-link"
+            ><img
+              src="images/2026/02/logo.png"
+              alt="アーバンネイチャー北九州"
+              width="160"
+              height="40" /></a
+          ><a
+            class="header__logo-sub"
+            href="https://www.city.kitakyushu.lg.jp/contents/924_02006.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            >北九州市生物多様性戦略 2025–2030<span class="sr-only"
+              >（北九州市公式サイト・新しいタブで開きます）</span
+            ></a
           >
-        </a>
+        </div>
         <nav class="header__nav" aria-label="メインナビゲーション">
           <a href="news/">お知らせ</a>
           <div class="nav-item">
@@ -744,12 +764,13 @@
             </ul>
           </div>
           <div class="nav-item">
-            <a href="network/">地域との繋がり</a>
+            <a href="network/">ネットワーク</a>
             <ul class="dropdown">
               <li>
                 <a href="network/">北九州ネイチャーポジティブネットワーク</a>
               </li>
-              <li><a href="join/">会員募集</a></li>
+              <li><a href="network/projects/">企業参加型プロジェクト</a></li>
+              <li><a href="join/"></a></li>
             </ul>
           </div>
           <div class="nav-item">
@@ -757,7 +778,7 @@
             <ul class="dropdown">
               <li><a href="network/cases/">ネイチャーポジティブ実践事例</a></li>
               <li><a href="blog/">企業の活動ブログ</a></li>
-              <li><a href="blog/">団体等の活動ブログ</a></li>
+              <li><a href="blog/organization.html">団体等の活動ブログ</a></li>
             </ul>
           </div>
           <a href="events/">イベントを探す</a>
@@ -797,13 +818,13 @@
           <a href="about/">全体像</a>
           <a href="about/biodiversity.html">生物多様性とは？</a>
           <a href="about/strategy.html">北九州市の取組</a>
-          <a href="about/spots.html">北九州市の自然スポット</a>
           <a href="center/">活動拠点</a>
+          <a href="about/spots.html">北九州市の自然スポット</a>
         </div>
       </div>
       <div class="mobile-nav__group">
         <div class="mobile-nav__parent">
-          <a href="network/">地域との繋がり</a>
+          <a href="network/">ネットワーク</a>
           <button
             class="mobile-nav__toggle"
             aria-expanded="false"
@@ -814,7 +835,8 @@
         </div>
         <div class="mobile-nav__children">
           <a href="network/">北九州ネイチャーポジティブネットワーク</a>
-          <a href="join/">会員募集</a>
+          <a href="network/projects/">企業参加型プロジェクト</a>
+          <a href="join/"></a>
         </div>
       </div>
       <div class="mobile-nav__group">
@@ -827,14 +849,14 @@
         <div class="mobile-nav__children">
           <a href="network/cases/">ネイチャーポジティブ実践事例</a>
           <a href="blog/">企業の活動ブログ</a>
-          <a href="blog/">団体等の活動ブログ</a>
+          <a href="blog/organization.html">団体等の活動ブログ</a>
         </div>
       </div>
       <a href="events/">イベントを探す</a>
       <a href="photos/">みんなの写真展</a>
       <a href="contact/">お問合せ</a>
       <div class="mobile-nav__cta">
-        <a href="../../join/" class="btn btn--primary btn--block">参加する</a>
+        <a href="join/" class="btn btn--primary btn--block">参加する</a>
       </div>
     </nav>
     <main id="main-content">
@@ -852,7 +874,7 @@
         <div class="hero-content">
           <h1 class="hero-catch">都市と自然、<br />近いからこそおもしろい。</h1>
           <p class="hero-sub">
-            北九州市の10の自然・環境施設が連携し、<br />市民・企業・団体とともにネイチャーポジティブな地域づくりに取り組んでいます。
+            市民・企業・団体が連携しネイチャーポジティブな地域づくりに取り組んでいます。
           </p>
         </div>
         <!-- ドットインジケーター -->
@@ -906,6 +928,91 @@
           <h2 class="section-title">お知らせ</h2>
           <p class="section-subtitle">アーバンネイチャー北九州からの最新情報</p>
           <div style="margin-top: 40px; border-top: 1px solid var(--border)">
+            <a href="events/20261012-hibikinada-gekirea.html" class="news-item-link">
+              <span
+                style="
+                  flex-shrink: 0;
+                  font-size: 0.72rem;
+                  font-weight: 700;
+                  background: rgba(44, 95, 45, 0.12);
+                  color: var(--primary);
+                  padding: 3px 12px;
+                  border-radius: 20px;
+                  white-space: nowrap;
+                "
+                >イベント</span
+              >
+              <span
+                style="
+                  flex-shrink: 0;
+                  font-size: 0.82rem;
+                  color: var(--text-light);
+                  white-space: nowrap;
+                "
+                >2026.09.07</span
+              >
+              <span
+                style="font-size: 0.95rem; font-weight: 600; color: var(--text)"
+                >「響灘の激レア生きもの大捜索」～発見！湿地の水中ヒーローズ～</span
+              >
+            </a>
+            <a href="events/20260925-mizube-yugure-concert.html" class="news-item-link">
+              <span
+                style="
+                  flex-shrink: 0;
+                  font-size: 0.72rem;
+                  font-weight: 700;
+                  background: rgba(44, 95, 45, 0.12);
+                  color: var(--primary);
+                  padding: 3px 12px;
+                  border-radius: 20px;
+                  white-space: nowrap;
+                "
+                >イベント</span
+              >
+              <span
+                style="
+                  flex-shrink: 0;
+                  font-size: 0.82rem;
+                  color: var(--text-light);
+                  white-space: nowrap;
+                "
+                >2026.09.02</span
+              >
+              <span
+                style="font-size: 0.95rem; font-weight: 600; color: var(--text)"
+                >9/25（金）みずべのゆうぐれコンサート</span
+              >
+            </a>
+            <a href="events/20260828-kabutomusi-kuwagata.html" class="news-item-link">
+              <span
+                style="
+                  flex-shrink: 0;
+                  font-size: 0.72rem;
+                  font-weight: 700;
+                  background: rgba(44, 95, 45, 0.12);
+                  color: var(--primary);
+                  padding: 3px 12px;
+                  border-radius: 20px;
+                  white-space: nowrap;
+                "
+                >イベント</span
+              >
+              <span
+                style="
+                  flex-shrink: 0;
+                  font-size: 0.82rem;
+                  color: var(--text-light);
+                  white-space: nowrap;
+                "
+                >2026.08.28</span
+              >
+              <span
+                style="font-size: 0.95rem; font-weight: 600; color: var(--text)"
+                >夏の企画展「世界のカブトムシ・クワガタ展～王者たちの素顔～」</span
+              >
+            </a>
+            <!-- 2026.04.18 サイトリニューアルのお知らせ（旧）：新しいリニューアル告知に差し替えのため非表示
             <a href="news/site-renewal.html" class="news-item-link">
               <span
                 style="
@@ -934,6 +1041,7 @@
                 >アーバンネイチャー北九州のサイトをリニューアルしました</span
               >
             </a>
+            -->
           </div>
           <div class="section-more">
             <a href="news/" class="more-link"
@@ -1064,14 +1172,7 @@
           <p class="section-subtitle">
             北九州市の自然とネイチャーポジティブを映像でご覧ください
           </p>
-          <div
-            style="
-              display: grid;
-              grid-template-columns: repeat(3, 1fr);
-              gap: 24px;
-              margin-top: 40px;
-            "
-          >
+          <div class="video-grid">
             <div>
               <div
                 style="
@@ -1673,7 +1774,7 @@
           <h2 class="section-title">地域との繋がり</h2>
           <p class="section-subtitle">企業・団体と連携した取組をご紹介</p>
           <a
-            href="network/cases/mine.html"
+            href="network/cases/kyushu-denryoku.html"
             class="mine-card"
             style="
               display: flex;
@@ -1694,8 +1795,8 @@
           >
             <div class="mine-card-img" style="flex: 0 0 44%; max-width: 44%">
               <img
-                src="images/2026/04/mine-450x269.png"
-                alt="株式会社マイン ─ 竹バイオマス循環モデル"
+                src="images/2026/09/kyushu-denryoku.jpg"
+                alt="九州電力株式会社 北九州支店 ─ 地域の自然資本を守り、次世代へつなぐ"
                 width="450"
                 height="269"
                 loading="lazy"
@@ -1740,7 +1841,7 @@
                   margin-bottom: 10px;
                 "
               >
-                株式会社マイン
+                九州電力株式会社 北九州支店
               </h3>
               <p
                 style="
@@ -1750,7 +1851,7 @@
                   margin-bottom: 14px;
                 "
               >
-                竹バイオマスと循環モデルで、未来をつなぐ
+                地域の自然資本を守り、次世代へつなぐ ～ネイチャーポジティブ経営と地域共生～
               </p>
               <p
                 style="
@@ -1759,9 +1860,7 @@
                   line-height: 1.8;
                   margin-bottom: 24px;
                 "
-              >
-                放置竹林を資源として活用し、地域の環境課題を解決する循環型ビジネスモデル。企業の地域貢献とネイチャーポジティブ活動を両立する先進事例をご紹介します。
-              </p>
+              ></p>
               <span
                 style="
                   display: inline-flex;
@@ -1798,52 +1897,58 @@
           <h2 class="section-title">イベントを探す</h2>
           <p class="section-subtitle">北九州市の自然を体感するイベント情報</p>
           <div class="events-grid">
-            <a href="events/" class="event-card">
+            <a href="events/np-keiei-kanousei.html" class="event-card">
               <div class="event-card-image">
                 <img
-                  src="images/2026/04/カルストジャングル冒険ツアー-2-1024x768-1-450x450.jpg"
-                  alt=""
-                  width="450"
-                  height="450"
+                  src="images/2026/07/IMG_8984-scaled.jpg"
+                  alt="自然との共生を企業の力に― ネイチャーポジティブ経営の可能性"
+                  width="2560"
+                  height="1440"
                   loading="lazy"
                 />
               </div>
               <div class="event-card-body">
-                <span class="event-date">2026.04.26 (日)</span>
-                <h3 class="event-card-title">カルストジャングル冒険ツアー</h3>
-                <p class="event-card-meta">ソラランド平尾台 / 要予約</p>
+                <span class="event-date">2026.07.08 (水) 〜 10 (金)</span>
+                <h3 class="event-card-title">
+                  自然との共生を企業の力に― ネイチャーポジティブ経営の可能性
+                </h3>
+                <p class="event-card-meta">北九州メッセ</p>
               </div>
             </a>
-            <a href="events/" class="event-card">
+            <a href="events/aroma-matsuri-2026.html" class="event-card">
               <div class="event-card-image">
                 <img
-                  src="images/2026/04/平尾台シャボン玉-1-450x450.jpg"
-                  alt="平尾台シャボン玉イベント"
-                  width="450"
-                  height="450"
+                  src="images/2026/07/aroma_page_4-1.jpg"
+                  alt="アロマ祭りプロジェクト2026"
+                  width="1226"
+                  height="506"
                   loading="lazy"
                 />
               </div>
               <div class="event-card-body">
-                <span class="event-date">2026.05.03 (日)</span>
-                <h3 class="event-card-title">平尾台シャボン玉フェスティバル</h3>
-                <p class="event-card-meta">ソラランド平尾台 / 参加無料</p>
+                <span class="event-date">2026.11.03 (火・祝)</span>
+                <h3 class="event-card-title">
+                  アロマ祭りプロジェクト2026 ～香りからはじまるネイチャーポジティブ～
+                </h3>
+                <p class="event-card-meta">響灘緑地（グリーンパーク）</p>
               </div>
             </a>
-            <a href="events/" class="event-card">
+            <a href="events/gashamoku-hozen.html" class="event-card">
               <div class="event-card-image">
                 <img
-                  src="images/2026/04/平尾台そば倶楽部2-1024x768-1-450x450.jpg"
-                  alt="平尾台そば倶楽部"
-                  width="450"
-                  height="450"
+                  src="images/2026/07/水中のガシャモク.jpg"
+                  alt="ガシャモクの域外保全"
+                  width="389"
+                  height="608"
                   loading="lazy"
                 />
               </div>
               <div class="event-card-body">
-                <span class="event-date">2026.05.10 (土)</span>
-                <h3 class="event-card-title">平尾台そば打ち体験教室</h3>
-                <p class="event-card-meta">平尾台自然の郷 / 要予約・有料</p>
+                <span class="event-date">2026.07 〜 09（公募期間）</span>
+                <h3 class="event-card-title">
+                  希少水生植物「ガシャモク」の域外保全～ガシャモクを未来へつなぐために～
+                </h3>
+                <p class="event-card-meta">お糸池（小倉南区）</p>
               </div>
             </a>
           </div>
@@ -1862,33 +1967,33 @@
             北九州市の自然写真を無料でご利用いただけます
           </p>
           <div class="photos-grid">
-            <a href="photos/?category=sea" class="photo-category">
+            <a href="photos/sea.html" class="photo-category">
               <img
-                src="images/2025/04/IMG_8716-450x450.jpg"
-                alt="海"
+                src="images/2025/04/20250419_031114641-450x450.jpg"
+                alt="海・干潟・ビオトープ"
                 width="450"
                 height="450"
                 loading="lazy"
               />
               <div class="photo-category-overlay">
-                <span class="photo-category-name">海</span>
+                <span class="photo-category-name">海・干潟・ビオトープ</span>
               </div>
             </a>
-            <a href="photos/?category=mountain" class="photo-category">
+            <a href="photos/mountain.html" class="photo-category">
               <img
-                src="images/2025/04/IMG_8742-450x450.jpg"
+                src="images/photos/hiraodai1/羊群原とキス岩-.jpg"
                 alt="山"
-                width="450"
-                height="450"
+                width="1024"
+                height="768"
                 loading="lazy"
               />
               <div class="photo-category-overlay">
                 <span class="photo-category-name">山</span>
               </div>
             </a>
-            <a href="photos/?category=river" class="photo-category">
+            <a href="photos/river.html" class="photo-category">
               <img
-                src="images/2025/04/IMG_8789-450x450.jpg"
+                src="images/2025/04/IMG_9012-450x450.jpg"
                 alt="川"
                 width="450"
                 height="450"
@@ -1898,7 +2003,7 @@
                 <span class="photo-category-name">川</span>
               </div>
             </a>
-            <a href="photos/?category=animal" class="photo-category">
+            <a href="photos/animal.html" class="photo-category">
               <img
                 src="images/2025/04/カルガモ-450x450.jpg"
                 alt="動物"
@@ -1910,9 +2015,9 @@
                 <span class="photo-category-name">動物</span>
               </div>
             </a>
-            <a href="photos/?category=plant" class="photo-category">
+            <a href="photos/plant.html" class="photo-category">
               <img
-                src="images/2025/04/カノコソウ-450x450.jpg"
+                src="images/2025/03/sagisou-450x450.jpg"
                 alt="植物"
                 width="450"
                 height="450"
@@ -1922,9 +2027,9 @@
                 <span class="photo-category-name">植物</span>
               </div>
             </a>
-            <a href="photos/?category=urban-nature" class="photo-category">
+            <a href="photos/urbannature.html" class="photo-category">
               <img
-                src="images/2025/04/IMG_8808-450x450.jpg"
+                src="images/2025/04/IMG_8716-450x450.jpg"
                 alt="街と自然"
                 width="450"
                 height="450"
@@ -1934,9 +2039,9 @@
                 <span class="photo-category-name">街と自然</span>
               </div>
             </a>
-            <a href="photos/?category=agriculture" class="photo-category">
+            <a href="photos/produce.html" class="photo-category">
               <img
-                src="images/2025/04/IMG_8920-450x450.jpg"
+                src="images/2025/04/IMG_8956-450x450.jpg"
                 alt="農産品"
                 width="450"
                 height="450"
@@ -1946,9 +2051,9 @@
                 <span class="photo-category-name">農産品</span>
               </div>
             </a>
-            <a href="photos/?category=insect" class="photo-category">
+            <a href="photos/etc.html" class="photo-category">
               <img
-                src="images/2025/04/ヨツボシトンボ-450x450.jpg"
+                src="images/2025/04/20230517ハタケシメジ-450x450.jpg"
                 alt="昆虫・その他"
                 width="450"
                 height="450"
@@ -2005,19 +2110,19 @@
               <a href="about/spots.html">北九州市の自然スポット</a>
             </div>
             <h3 class="footer__heading" style="margin-top: 24px">
-              地域との繋がり
+              ネットワーク
             </h3>
             <div class="footer__links">
               <a href="network/">北九州ネイチャーポジティブ<br class="footer__br">ネットワーク</a>
-              <a href="join/">会員募集</a>
+              <a href="network/projects/">企業参加型プロジェクト</a>
             </div>
           </div>
           <div>
-            <h3 class="footer__heading" style="margin-top:24px">活動紹介</h3>
+            <h3 class="footer__heading">活動紹介</h3>
             <div class="footer__links">
               <a href="network/cases/">ネイチャーポジティブ実践事例</a>
               <a href="blog/">企業の活動ブログ</a>
-              <a href="blog/">団体等の活動ブログ</a>
+              <a href="blog/organization.html">団体等の活動ブログ</a>
             </div>
           </div>
           <div>
@@ -2033,7 +2138,7 @@
         </div>
         <div class="footer__bottom">
           <span>Copyright (C) 2026 CITY OF KITAKYUSHU All Rights Reserved.</span>
-          <a href="privacy/">プライバシーポリシー</a>
+        </div>
       </div>
     </footer>
     <!-- JavaScript -->
@@ -2093,27 +2198,8 @@
         activateSlide(slides[0]);
         startTimer();
       })();
-      // モバイルナビ サブメニューアコーディオン
-      document
-        .querySelectorAll("#js-mobile-nav .mobile-nav__toggle")
-        .forEach((btn) => {
-          btn.addEventListener("click", () => {
-            const children = btn.closest(
-              ".mobile-nav__parent",
-            ).nextElementSibling;
-            const isOpen = children.classList.contains("is-open");
-            document
-              .querySelectorAll("#js-mobile-nav .mobile-nav__children")
-              .forEach((el) => el.classList.remove("is-open"));
-            document
-              .querySelectorAll("#js-mobile-nav .mobile-nav__toggle")
-              .forEach((el) => el.setAttribute("aria-expanded", "false"));
-            if (!isOpen) {
-              children.classList.add("is-open");
-              btn.setAttribute("aria-expanded", "true");
-            }
-          });
-        });
+      // モバイルナビのサブメニュー開閉は js/main.js が担当する。
+      // ここに同じ処理を書くと二重に発火して開閉が打ち消し合うため置かない。
     </script>
   </body>
 </html>
